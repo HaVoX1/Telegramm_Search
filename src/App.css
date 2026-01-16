@@ -1,0 +1,94 @@
+.app {
+  min-height: 100vh;
+  background: #f8fafc;
+  color: #0f172a;
+  padding: 1rem;
+  /* Оптимизация для мобильных устройств */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.app__header {
+  max-width: 960px;
+  margin: 0 auto 2.5rem;
+  text-align: center;
+}
+ 
+.app__title {
+  font-size: 2.75rem;
+  margin-bottom: 0.75rem;
+  color: #312e81;
+}
+
+.app__subtitle {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #475569;
+}
+
+.app__error {
+  max-width: 960px;
+  margin: 1.5rem auto 0;
+  padding: 1rem 1.5rem;
+  background-color: #fee2e2;
+  color: #b91c1c;
+  border-radius: 0.75rem;
+  border: 1px solid #fca5a5;
+}
+
+.app > * {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Мобильная оптимизация для Telegram Mini App */
+@media (max-width: 768px) {
+  .app {
+    padding: 0.75rem;
+  }
+
+  .app__header {
+    margin-bottom: 1.5rem;
+  }
+
+  .app__title {
+    font-size: 1.75rem;
+  }
+
+  .app__subtitle {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .app {
+    padding: 0.5rem;
+  }
+
+  .app__header {
+    margin-bottom: 1rem;
+  }
+
+  .app__title {
+    font-size: 1.5rem;
+  }
+
+  .app__subtitle {
+    font-size: 0.875rem;
+  }
+
+  .app__error {
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+  }
+}
+
+/* Поддержка безопасных зон для iOS */
+@supports (padding: max(0px)) {
+  .app {
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
+    padding-bottom: max(1rem, env(safe-area-inset-bottom));
+  }
+}

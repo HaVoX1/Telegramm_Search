@@ -1,0 +1,123 @@
+.searchResults {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.searchResults__message {
+  margin-top: 2rem;
+  font-size: 1.05rem;
+  color: #475569;
+  text-align: center;
+}
+
+.searchResults__item {
+  padding: 1.75rem;
+  border-radius: 1rem;
+  background-color: #ffffff;
+  box-shadow: 0 20px 48px -32px rgba(15, 23, 42, 0.45);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.searchResults__itemHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.searchResults__title {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #1e293b;
+}
+
+.searchResults__meta {
+  margin: 0.25rem 0 0;
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+.searchResults__link {
+  border-radius: 0.75rem;
+  background: linear-gradient(120deg, #38bdf8, #6366f1);
+  color: #ffffff;
+  font-weight: 600;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.searchResults__link:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 18px 38px -24px rgba(99, 102, 241, 0.65);
+}
+
+.searchResults__matches {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.searchResults__match {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.searchResults__pageButton {
+  border: none;
+  border-radius: 0.9rem;
+  padding: 0.65rem 1.1rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #0f172a;
+  background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+  box-shadow: 0 16px 32px -20px rgba(15, 23, 42, 0.45);
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.2s ease;
+}
+
+.searchResults__pageButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 24px 48px -24px rgba(99, 102, 241, 0.6);
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.12), rgba(56, 189, 248, 0.1));
+}
+
+.searchResults__pageButton:focus-visible {
+  outline: 3px solid rgba(99, 102, 241, 0.5);
+  outline-offset: 2px;
+}
+
+.searchResults__snippet {
+  margin: 0;
+  color: #1e293b;
+  line-height: 1.6;
+}
+
+.searchResults__highlight {
+  background: linear-gradient(120deg, rgba(99, 102, 241, 0.15), rgba(56, 189, 248, 0.15));
+  padding: 0 0.25rem;
+  border-radius: 0.4rem;
+}
+
+@media (max-width: 720px) {
+  .searchResults__item {
+    padding: 1rem;
+  }
+
+  .searchResults__match {
+    grid-template-columns: 1fr;
+  }
+
+  .searchResults__page {
+    color: #6366f1;
+  }
+}
